@@ -71,14 +71,18 @@ Each model is trained in separate notebook. When defining base model, I set incl
 
 **8. Result:**
 
-| Model                                           | Accuracy |
-| ----------------------------------------------- | -------- |
-| InceptionResNetV2 (without pre-trained weights) | 84%      |
-| EfficientNetV2B2 (with imagenet weights)        | 80%      |
-| Custom Model                                    | 65%      |
+| Model                                             | Accuracy |
+| -----------------------------------------------   | -------- |
+| InceptionResNetV2 (without pre-trained weights)   | 84%      |
+| EfficientNetV2B2 (with imagenet weights)          | 80%      |
+| Custom Model                                      | 65%      |
+| (Poutyne framework) Pretrained EfficientNetv2b2   | 94%      |
+
 
 ## Conclusion:
 
 This project demonstrates the entire workflow of building a deep learning model without pre-trained weights, with imagenet weights, and using custom model for classifying cats and dogs. The use of callbacks and optimization state saving ensures that the model's progress is preserved, allowing for the resumption of training in case of interruptions. The achieved accuracy on the testing dataset reflects the model's capability to generalize and classify images accurately. I have compared accuracy of three models. Among the models I have used, InceptionResNetV2 achieved highest accuracy.
 
 Note: I faced issues when I used model such as MobileNet, it caused overfitting, and val accuracy stuck at 0.5 ven after 10 epochs. I tried many trials and errors including changing model complexity, learning rate, batch_size, but could not solve it. Then I switched model to InceptionResNetV2 (uses more parameters), then the problem did not appear. 
+
+Note: Recently, I have added Pytorch and Poutyne implementation and WandB logging.
