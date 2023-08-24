@@ -1,0 +1,7 @@
+version: "3"
+services:
+  fastapi-cat_v_dog:
+    image: fastapi-cat_v_dog:1.0  # Use the image built from your Dockerfile
+    ports:
+      - "8000:80"
+
