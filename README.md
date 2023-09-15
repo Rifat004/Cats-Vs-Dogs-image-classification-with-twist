@@ -86,4 +86,6 @@ This project demonstrates the entire workflow of building a deep learning model 
 Note: I faced issues when I used model such as MobileNet, it caused overfitting, and val accuracy stuck at 0.5 ven after 10 epochs. I tried many trials and errors including changing model complexity, learning rate, batch_size, but could not solve it. Then I switched model to InceptionResNetV2 (uses more parameters), then the problem did not appear. 
 
 Note: Recently, I have added Pytorch and Poutyne implementation and WandB logging. I also added code for fast api service dockerization in "Service Dockerize" directory.
+![](cat-dog-api)
+
 
